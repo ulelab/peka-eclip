@@ -1,6 +1,6 @@
 #!/usr/bin/env nextflow
 
-params.reads = "$baseDir/data/*.{1,2}.fastq.gz"
+params.reads = "${params.input}/*.{1,2}.fastq.gz"
 
 def summary = [:]
 summary['Output directory'] = params.outdir
