@@ -15,11 +15,11 @@ ch_reads = Channel.fromFilePairs(params.reads)
 process REMOVEADAPTERS {
 
     tag "$sample"
-    publishDir "${params.outdir}/adapters_removed", pattern: "*.round2.fastq.gz", mode: 'copy', overwrite: false
-    publishDir "${params.outdir}/adapters_removed/logs", pattern: "*.log", mode: 'copy', overwrite: false
+    publishDir "${params.outdir}/adapters_removed", pattern: "*.round2.fastq.gz", mode: 'copy', overwrite: true
+    publishDir "${params.outdir}/adapters_removed/logs", pattern: "*.log", mode: 'copy', overwrite: true
 
     cpus '8'
-    memory '16G'
+    memory '32G'
     time '2h'
 
     input:
@@ -107,10 +107,10 @@ process REMOVEADAPTERS {
 process MOVEUMI {
 
     tag "$sample"
-    publishDir "${params.outdir}/umi_moved", mode: 'copy', overwrite: false
+    publishDir "${params.outdir}/umi_moved", mode: 'copy', overwrite: true
 
-    cpus '4'
-    memory '64G'
+    cpus '1'
+    memory '32G'
     time '2h'
 
     input:
