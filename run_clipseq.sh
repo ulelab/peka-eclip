@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 ml purge
 ml Nextflow/21.04.0
@@ -9,10 +9,10 @@ export NXF_SINGULARITY_CACHEDIR=/camp/lab/luscomben/home/shared/singularity
 REFDIR=/camp/lab/luscomben/home/users/chakraa2/projects/peka/eclip/ref
 
 ## UPDATE PIPELINE
-nextflow pull amchakra/clipseq -r feat-dedup-bug
+nextflow pull amchakra/clipseq -r dev
 
 ## RUN PIPELINE
-nextflow run amchakra/clipseq -r feat-dedup-bug \
+nextflow run amchakra/clipseq -r dev \
 -profile crick \
 --input samplesheet.csv \
 --outdir results_clipseq \
