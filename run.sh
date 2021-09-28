@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 ml purge
 ml Nextflow/21.04.0
