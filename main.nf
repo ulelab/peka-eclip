@@ -64,7 +64,7 @@ process REMOVEADAPTERS {
         -o ${sample}.1.adapterTrim.round1.fastq.gz \
         -p ${sample}.2.adapterTrim.round1.fastq.gz \
         ${reads[0]} \
-        ${reads[0]} \
+        ${reads[1]} \
         > ${sample}.cutadapt_r1.log
 
     cutadapt \
